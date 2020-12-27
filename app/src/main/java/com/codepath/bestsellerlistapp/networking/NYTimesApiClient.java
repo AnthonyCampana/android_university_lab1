@@ -25,12 +25,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class NYTimesApiClient {
 
     // TODO: Replace the below API key with your own generated key
-    private static final String API_KEY = "<YOUR-API-KEY-GOES-HERE>";
+    private static final String API_KEY = "O6ATM1zA3XbEEkxgXMnF4NqV5AMtAqGp";
     private NYTimesService nyTimesService;
 
     public NYTimesApiClient() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.nytimes.com")
+                //http://api.nytimes.com/svc/semantic/v2/concept
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         nyTimesService = retrofit.create(NYTimesService.class);
