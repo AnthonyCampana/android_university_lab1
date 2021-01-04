@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="6dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/ranking"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="23dp"
-        android:text="TextView" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/book_image"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <TextView
+            android:id="@+id/ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="@id/book_image"
+            android:fontFamily="serif"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/book_author"
@@ -32,22 +44,19 @@
 
     <TextView
         android:id="@+id/book_description"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="5"
+        android:textAppearance="?attr/textAppearanceListItem" />
 
     <Button
         android:id="@+id/buy_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="#266597"
-        android:text="BUY ON AMAZON"
-        android:textColor="#FFFFFF" />
+        android:backgroundTint="#567b95"
+        android:text="BUY ON AMAZON!"
+        android:textColor="@android:color/white" />
 </LinearLayout>
